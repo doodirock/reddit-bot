@@ -20,6 +20,7 @@ module.exports = async (client, message) => {
   // Should likely just swap to String.raw for template literal instead of backslash hell
   const oldReddit = new RegExp(`(https?://old.reddit\\.com(\\/[A-Za-z0-9\\-\\._~:\\/\\?#\\[\\]@!$&'\\(\\)\\*\\+,;\\=]*)?)`);
   if (message.content.match(oldReddit)) {
+    message.delete();
     return message.reply(`Are you really still using Old Reddit?`);
   }
 
