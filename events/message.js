@@ -23,7 +23,7 @@ module.exports = async (client, message) => {
     let stripurl = message.content;
     let newStr = stripurl.replace(/https?:\/\/old.reddit\.com/g, "https://www.reddit.com");
     message.delete();
-    return message.reply('```Old Reddit is the past brah.  It is time to move into the future.  What you really meant to say was:```'+newStr);
+    return message.reply('```Old Reddit is the past brah.  It is time to move into the future.  What you really meant to say was:```  \n'+newStr);
   }
 
   // Also good practice to ignore any message that does not start with our prefix,
