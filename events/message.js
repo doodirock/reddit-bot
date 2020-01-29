@@ -21,9 +21,9 @@ module.exports = async (client, message) => {
   const oldReddit = new RegExp(`(https?://old.reddit\\.com(\\/[A-Za-z0-9\\-\\._~:\\/\\?#\\[\\]@!$&'\\(\\)\\*\\+,;\\=]*)?)`);
   if (message.content.match(oldReddit)) {
     let stripurl = message.content;
-    console.log(stripurl);
+    let newStr = stripurl.replace(/https?:\/\/old.reddit\.com/g, "https://www.reddit.com");
     message.delete();
-    return message.reply(`Are you really still using Old Reddit?`);
+    return message.reply('Are you really still using Old Reddit? What I think you meant to write was: ```'+newStr+'```');
   }
 
   // Also good practice to ignore any message that does not start with our prefix,
