@@ -42,7 +42,7 @@ let prompts = [
 ];
 
 (async function() {
-  console.log("Setting Up Reddit Bot Configuration...");
+  console.log("Setting Up Reddit Bot Configuration...", process.env.MODE);
   await settings.defer;
   if (!settings.has("default")) {
     prompts = prompts.slice(1);
