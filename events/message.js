@@ -17,9 +17,9 @@ module.exports = async (client, message) => {
     return message.reply(`My prefix on this guild is \`${settings.prefix}\``);
   }
 
-  const oldReddit = new RegExp(`(old.reddit\.com(\/[A-Za-z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*)?)/g`);
+  const oldReddit = new RegExp(`(old.reddit\\.com(\\/[A-Za-z0-9\\-\\._~:\\/\\?#\\[\\]@!$&'\\(\\)\\*\\+,;\\=]*)?)`);
   if (message.content.match(oldReddit)) {
-    return message.reply(`My prefix on this guild is \`${settings.prefix}\``);
+    return message.reply(`Are you really still using Old Reddit?`);
   }
 
   // Also good practice to ignore any message that does not start with our prefix,
