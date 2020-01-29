@@ -17,7 +17,8 @@ module.exports = async (client, message) => {
     return message.reply(`My prefix on this guild is \`${settings.prefix}\``);
   }
 
-  const oldReddit = new RegExp(`(old.reddit\\.com(\\/[A-Za-z0-9\\-\\._~:\\/\\?#\\[\\]@!$&'\\(\\)\\*\\+,;\\=]*)?)`);
+  // Should likely just swap to String.raw for template literal instead of backslash hell
+  const oldReddit = new RegExp(`(https?://old.reddit\\.com(\\/[A-Za-z0-9\\-\\._~:\\/\\?#\\[\\]@!$&'\\(\\)\\*\\+,;\\=]*)?)`);
   if (message.content.match(oldReddit)) {
     return message.reply(`Are you really still using Old Reddit?`);
   }
