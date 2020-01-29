@@ -1,0 +1,35 @@
+{
+  "name": "reddit-bot",
+  "version": "0.1.0",
+  "description": "Reddit bot for the Discord server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "node setup.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doodirock/reddit-bot"
+  },
+  "author": "Joel Albert <joel@____.com>",
+  "contributors": [
+    ""
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doodirock/reddit-bot/issues"
+  },
+  "homepage": "https://github.com/doodirock/reddit-bot#readme",
+  "dependencies": {
+    "better-sqlite3": "^5.4.0",
+    "chalk": "^2.4.2",
+    "discord.js": "^11.5.5",
+    "enmap": "^5.0.0",
+    "inquirer": "^6.3.1",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2"
+  }
+}
